@@ -1,6 +1,8 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import Image from "next/image"
+import { useTheme } from "next-themes"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { ArrowUpRight, Github, Twitter, Linkedin, Instagram } from "lucide-react"
 
@@ -13,6 +15,12 @@ const socialLinks = [
 
 export function SiteFooter() {
   const footerAnim = useScrollAnimation(0.05)
+  const [mounted, setMounted] = useState(false)
+  const { theme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <footer className="bg-card border-t border-border pt-16 pb-8 relative overflow-hidden">
@@ -30,11 +38,11 @@ export function SiteFooter() {
           {/* Logo and social */}
           <div className="md:col-span-2">
             <Image
-              src="/images/logo.png"
+              src={mounted && theme === "dark" ? "/images/logo-dark.png" : "/images/logo-light.png"}
               alt="Gilgamesh Production"
               width={180}
               height={45}
-              className="object-contain mb-6 opacity-90 dark:brightness-100 brightness-90 hover:opacity-100 transition-opacity"
+              className="object-contain mb-6 opacity-90 hover:opacity-100 transition-opacity"
               style={{ height: "45px", width: "auto" }}
             />
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mb-6">

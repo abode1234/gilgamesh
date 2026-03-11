@@ -27,21 +27,20 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b ${
-        scrolled
-          ? "bg-background/90 border-border shadow-lg"
-          : "bg-background/60 border-transparent"
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 backdrop-blur-md border-b ${scrolled
+        ? "bg-background/90 border-border shadow-lg"
+        : "bg-background/60 border-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <a href="#home" className="flex-shrink-0 flex items-center gap-3">
             <Image
-              src="/images/logo.png"
+              src={mounted && theme === "dark" ? "/images/logo-dark.png" : "/images/logo-light.png"}
               alt="Gilgamesh Production Logo"
               width={180}
               height={48}
-              className="object-contain dark:brightness-100 brightness-90"
+              className="object-contain"
               style={{ height: "48px", width: "auto" }}
               priority
             />
