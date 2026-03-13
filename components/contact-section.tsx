@@ -11,7 +11,7 @@ export function ContactSection() {
   const [focusedField, setFocusedField] = useState<string | null>(null)
 
   return (
-    <section id="contact" className="py-24 bg-background relative overflow-hidden">
+    <section id="contact" className="py-24 bg-transparent relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-floating" />
@@ -53,7 +53,7 @@ export function ContactSection() {
                   className={`animate-fade-up stagger-${i + 1} ${leftAnim.isVisible ? "in-view" : ""}`}
                 >
                   <div
-                    className="flex items-center gap-4 p-4 bg-card border border-border hover:border-primary transition-all duration-500 group cursor-pointer hover-lift"
+                    className="flex items-center gap-4 p-4 bg-card/50 backdrop-blur-sm border border-border hover:border-primary transition-all duration-500 group cursor-pointer hover-lift"
                   >
                     <div className="w-14 h-14 flex items-center justify-center border border-primary bg-primary/10 transition-all duration-300 group-hover:bg-primary group-hover:scale-110">
                       <item.Icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors" />
@@ -78,7 +78,7 @@ export function ContactSection() {
           >
             <div
               ref={rightAnim.ref}
-              className="bg-card p-8 lg:p-12 border border-border relative overflow-hidden"
+              className="bg-card/50 backdrop-blur-sm p-8 lg:p-12 border border-border relative overflow-hidden"
               style={{ transformStyle: "preserve-3d" }}
             >
               {/* Animated background glow following focus */}

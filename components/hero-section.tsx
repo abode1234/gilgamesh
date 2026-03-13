@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react"
 import { ArrowRight, Terminal } from "lucide-react"
-import { AnimatedBackground } from "@/components/animated-background"
 
 export function HeroSection() {
   const [loaded, setLoaded] = useState(false)
@@ -27,13 +26,10 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent"
     >
-      {/* 3D CSS Background */}
-      <AnimatedBackground />
-
       {/* Overlay gradient */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-background/30 via-transparent to-background pointer-events-none" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-background/0 via-transparent to-background/50 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Status badge */}

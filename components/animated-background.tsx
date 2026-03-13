@@ -66,7 +66,7 @@ export function AnimatedBackground() {
   const parallaxY = (mousePos.y - 0.5) * 30
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
       {/* Grid pattern */}
       <div 
         className="absolute inset-0 opacity-[0.03]"

@@ -44,7 +44,7 @@ export function ServicesSection() {
   const cards = useScrollAnimation(0.1)
 
   return (
-    <section id="services" className="py-24 bg-card relative overflow-hidden">
+    <section id="services" className="py-24 bg-transparent relative overflow-hidden">
       {/* Background animated elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse" />
@@ -74,7 +74,7 @@ export function ServicesSection() {
                 className={`animate-fade-up stagger-${i + 1} ${cards.isVisible ? "in-view" : ""}`}
               >
                 <div
-                  className="group relative bg-background p-8 border border-border hover:border-primary/50 transition-all duration-500 gold-glow overflow-hidden h-full"
+                  className="group relative bg-background/50 backdrop-blur-sm p-8 border border-border hover:border-primary/50 transition-all duration-500 gold-glow overflow-hidden h-full"
                   style={{ transformStyle: "preserve-3d" }}
                 >
                   {/* Animated corner borders on hover */}

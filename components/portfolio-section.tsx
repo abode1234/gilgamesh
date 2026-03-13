@@ -67,7 +67,7 @@ export function PortfolioSection() {
   const grid = useScrollAnimation(0.05)
 
   return (
-    <section id="portfolio" className="py-24 bg-background relative overflow-hidden">
+    <section id="portfolio" className="py-24 bg-transparent relative overflow-hidden">
       {/* Background animated blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary/5 animate-morph blur-3xl" />

@@ -28,7 +28,7 @@ export function AboutSection() {
   const statValues = [stat1, stat2, stat3]
 
   return (
-    <section id="about" className="py-24 bg-card relative overflow-hidden">
+    <section id="about" className="py-24 bg-transparent relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-10 -left-20 w-96 h-96 border border-primary/10 rounded-full animate-spin-slow" />
@@ -124,7 +124,7 @@ export function AboutSection() {
                     className={`animate-fade-up stagger-${i + 1} ${capsAnim.isVisible ? "in-view" : ""}`}
                   >
                     <div
-                      className="group flex items-center gap-3 p-4 bg-background border border-border hover:border-primary transition-all duration-300 hover-lift cursor-pointer"
+                      className="group flex items-center gap-3 p-4 bg-background/50 backdrop-blur-sm border border-border hover:border-primary transition-all duration-300 hover-lift cursor-pointer"
                     >
                       <div className="w-12 h-12 flex items-center justify-center bg-primary/10 group-hover:bg-primary transition-colors duration-300">
                         <Icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />

@@ -132,7 +132,13 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-color: var(--background);
+  }
+  
+  .dark body {
+    background: radial-gradient(circle at 50% 0%, #15110a 0%, #050505 50%, #0a0805 100%);
+    background-attachment: fixed;
   }
 }
 

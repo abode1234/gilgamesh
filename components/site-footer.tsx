@@ -23,7 +23,7 @@ export function SiteFooter() {
   }, [])
 
   return (
-    <footer className="bg-card border-t border-border pt-16 pb-8 relative overflow-hidden">
+    <footer className="bg-transparent border-t border-border pt-16 pb-8 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
@@ -56,7 +56,7 @@ export function SiteFooter() {
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
-                    className="w-10 h-10 flex items-center justify-center border border-border bg-background hover:border-primary hover:bg-primary hover:text-primary-foreground text-muted-foreground transition-all duration-300 hover:scale-110 hover-lift"
+                    className="w-10 h-10 flex items-center justify-center border border-border bg-background/50 backdrop-blur-sm hover:border-primary hover:bg-primary hover:text-primary-foreground text-muted-foreground transition-all duration-300 hover:scale-110 hover-lift"
                   >
                     <Icon className="w-4 h-4" />
                   </a>
@@ -101,7 +101,7 @@ export function SiteFooter() {
                 <input
                   type="email"
                   placeholder="Enter email address"
-                  className="bg-background border border-border text-foreground px-4 py-3 text-sm focus:outline-none focus:border-primary transition-all duration-300 w-full placeholder:text-muted-foreground focus:pl-6"
+                  className="bg-background/50 backdrop-blur-sm border border-border text-foreground px-4 py-3 text-sm focus:outline-none focus:border-primary transition-all duration-300 w-full placeholder:text-muted-foreground focus:pl-6"
                 />
                 <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-500 group-focus-within:w-full" />
               </div>
